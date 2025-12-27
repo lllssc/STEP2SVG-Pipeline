@@ -1,0 +1,119 @@
+import os
+import FreeCAD
+import Import
+import TechDraw
+import TechDrawGui
+import FreeCADGui
+import time
+
+
+# Record the maximum boundary length
+def max_boundary_size(obj):
+	if obj.TypeId == 'Part::Feature':
+		bbox = obj.Shape.BoundBox
+		x_length = round(bbox.XLength)
+		y_length = round(bbox.YLength)
+		z_length = round(bbox.ZLength)
+		max(x_length, y_length, z_length)
+		max_length = max(x_length, y_length, z_length)
+		return max_length
+	elif obj.TypeId == 'App::Part':
+		max_length = 0
+		for feature in obj.Group:
+			max_length = max(max_length, max_boundary_size(feature))
+		return max_length
+
+
+step_file = 'C:/Users/13419/Desktop/project/data_collection/opensource/test.step'
+file_name = os.path.basename(step_file).split('.')[0]
+drawing_folder = 'C:/Users/13419/Desktop/project/data_collection/opensource/drawing'
+
+
+# Set different view direction vectors
+directions = {
+	'Front': [FreeCAD.Vector(0, 0, 1), FreeCAD.Vector(1, 0, 0)],
+	'Right': [FreeCAD.Vector(1, 0, 0), FreeCAD.Vector(0, 0, -1)],
+	'Top': [FreeCAD.Vector(0, 1, 0), FreeCAD.Vector(1, 0, 0)],
+	'FrontTopRight': [FreeCAD.Vector(0.58, 0.58, 0.58), FreeCAD.Vector(0.71, 0, -0.71)]
+}
+
+# Create a new document
+doc_name = "test"
+doc = App.newDocument(doc_name)
+
+# Import STEP file into the newly created document
+Import.insert(step_file, doc_name)
+
+# Check if the imported STEP file is empty
+if len(doc.Objects) == 0:
+	print(f"STEP file is empty.")
+	sys.exit()
+
+# Add drawing page (using a template)
+page = doc.addObject('TechDraw::DrawPage', 'Page')
+template = doc.addObject('TechDraw::DrawSVGTemplate', 'Template')
+template.Template = 'C:/Users/13419/Desktop/project/data_collection/opensource/template400.svg'
+page.Template = template
+doc.recompute()
+Gui.updateGui()
+
+# Update page to ensure drawing dimensions are accessible
+page.Visibility = False
+page.Visibility = True
+doc.recompute()
+Gui.updateGui()
+
+# Classify and process by parts and assemblies
+index = -1
+objects = doc.Objects
+for i in range(0, len(objects)):
+	if objects[i].TypeId == 'App::Part':
+		index = i
+		break
+	if objects[i].TypeId == 'Part::Feature':
+		index = i
+# Calculate scaling size
+max_size = max_boundary_size(objects[index])
+if max_size == 0: # Prevent empty file errors
+	max_size = 1
+
+for direction in directions.keys():
+	# Add view
+	view = doc.addObject('TechDraw::DrawViewPart', 'View')
+	# Add technical drawing
+	view.Source = objects[index]
+	page.addView(view)
+	doc.recompute() 
+	time.sleep(0.5) # Wait for loading
+	Gui.updateGui()
+	# Set scaling size
+	view.ScaleType = 'Custom'
+	view.Scale = 200 / max_size # Customized according to template size
+	# Set direction vectors to determine perspective
+	view.Direction = directions[direction][0]
+	view.XDirection = directions[direction][1]
+	# Set drawing position(center)
+	view.X = page.PageWidth / 2
+	view.Y = page.PageHeight / 2
+	doc.recompute()
+	time.sleep(0.5) # Wait for loading
+	Gui.updateGui()
+	# Export drawing
+	output_filename = file_name + '_' + direction +'.svg'
+	output_path = os.path.join(drawing_folder, output_filename)
+	TechDrawGui.exportPageAsSvg(page, output_path)
+	# Delete view(one view per SVG file)
+	doc.removeObject('View')
+	doc.recompute()
+	Gui.updateGui()
+	filesize = round(os.path.getsize(output_path) / 1024)
+	print(f"File: {output_filename}      Size: {filesize}KB")
+	
+# Close STEP file
+doc.clearDocument()
+print(f"{file_name} is done.")
+
+# Delete document
+App.closeDocument(doc_name)
+
+
