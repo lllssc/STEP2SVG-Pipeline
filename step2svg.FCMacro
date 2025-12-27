@@ -24,9 +24,11 @@ def max_boundary_size(obj):
 		return max_length
 
 
-step_file = 'C:/Users/13419/Desktop/project/data_collection/opensource/test.step'
+step_file = 'test.step'
 file_name = os.path.basename(step_file).split('.')[0]
-drawing_folder = 'C:/Users/13419/Desktop/project/data_collection/opensource/drawing'
+drawing_folder = 'drawing'
+if not os.path.exists(drawing_folder):
+	os.makedirs(drawing_folder)
 
 
 # Set different view direction vectors
