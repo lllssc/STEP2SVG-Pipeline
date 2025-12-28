@@ -54,7 +54,7 @@ if len(doc.Objects) == 0:
 # Add drawing page (using a template)
 page = doc.addObject('TechDraw::DrawPage', 'Page')
 template = doc.addObject('TechDraw::DrawSVGTemplate', 'Template')
-template.Template = 'C:/Users/13419/Desktop/project/data_collection/opensource/template400.svg'
+template.Template = 'template400.svg'
 page.Template = template
 doc.recompute()
 Gui.updateGui()
