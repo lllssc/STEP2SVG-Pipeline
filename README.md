@@ -60,7 +60,7 @@ python reorder.py input_normalized.svg -o output.svg    # custom output path
 
 > ⚠️ **Important:** Always reorder a **normalized** SVG. The greedy-chaining step uses distance-to-origin heuristics that assume a well-scaled coordinate space.
 
-### 3. Visualizing the Drawing Sequence (Animation)
+### 3. Visualize (`animation.py`)
 
 We also provide pre-rendered animations to illustrate the difference before and after reordering:
 
