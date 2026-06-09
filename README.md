@@ -26,7 +26,55 @@ Follow these steps to set up the automation pipeline:
 - **Batch Processing:** While it is entirely possible to wrap this logic into a Python loop for batch processing, **FreeCAD must remain open and visible** throughout the entire process to ensure the GUI-dependent rendering functions correctly.
 
 ## Preprocess SVG Drawings
-coming soon.
+
+This section of the code was refactored and reorganized with AI assistance based on the original implementation to improve readability and ease of use.
+
+### Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Workflow Overview
+
+The preprocessing follows a two-stage pipeline: **normalize → reorder**. Always run `normalize.py` first, then feed its output into `reorder.py`.
+
+### 1. Normalize (`normalize.py`)
+
+We scale the SVG engineering drawings exported from FreeCAD into a 200×200 viewBox while preserving the original line styles.
+
+```bash
+python normalize.py input.svg                           # output → input_normalized.svg
+python normalize.py input.svg -o output.svg             # custom output path
+python normalize.py input.svg -w 0.5 -c "#FF0000"       # custom stroke width & color
+```
+
+### 2. Reorder (`reorder.py`)
+
+To standardize path ordering, we used the canvas top-left corner as origin and applied graph theory algorithms to identify all contours. These contours were then arranged by increasing distance from origin, with each contour drawn clockwise.
+
+```bash
+python reorder.py input_normalized.svg                  # output → input_normalized_reordered.svg
+python reorder.py input_normalized.svg -o output.svg    # custom output path
+```
+
+> ⚠️ **Important:** Always reorder a **normalized** SVG. The greedy-chaining step uses distance-to-origin heuristics that assume a well-scaled coordinate space.
+
+### 3. Visualizing the Drawing Sequence (Animation)
+
+We also provide pre-rendered animations to illustrate the difference before and after reordering:
+
+**Before reordering**:
+![Normalized animation](preprocess/test_normalized_frames/test_normalized.gif)
+
+**After reordering**:
+![Reordered animation](preprocess/test_normalized_reordered_frames/test_normalized_reordered.gif)
+
+You can also use our pipeline to visualize the path ordering of your own SVG engineering drawings (containing only line and Bézier curve commands), which will generate an individual SVG and PNG file for each stroke, and export an animated GIF illustrating the drawing process. 
+
+```bash
+python animation.py input_normalized.svg
+```
 
 ## Cite
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="200" version="1.1" viewBox="0 0 200 200" width="200">
+	<defs/>
+	<path d="M 73.60000000000001,97.80000000000001 L 126.4,97.80000000000001" fill="none" fill-rule="evenodd" stroke="#005E2A" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 73.60000000000001,102.2 L 126.4,102.2" fill="none" fill-rule="evenodd" stroke="#005E2A" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 65.16405,107.91020000000002 C 61.127199999999995,110.80740000000002 55.55640000000001,110.2 52.238699999999994,106.50095000000002" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 52.238699999999994,106.50095000000002 C 48.921,102.80191 48.921,97.19809000000001 52.238699999999994,93.49905000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 52.238699999999994,93.49905000000001 C 55.55640000000001,89.80000000000001 61.127199999999995,89.19260000000001 65.16405,92.08980000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 69.23675000000001,93.4 C 67.77555,93.4 66.35115,92.94175000000001 65.16405,92.08980000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 65.16405,107.91020000000002 C 66.35115,107.05825 67.77555,106.60000000000001 69.23675000000001,106.60000000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 134.83595,92.08980000000001 C 133.64885,92.94175000000001 132.22445000000002,93.4 130.76325,93.4" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 134.83595,92.08980000000001 C 138.8728,89.19260000000001 144.4436,89.80000000000001 147.7613,93.49905000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 147.7613,93.49905000000001 C 151.079,97.19809000000001 151.079,102.80191 147.7613,106.50095000000002" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 147.7613,106.50095000000002 C 144.4436,110.2 138.8728,110.80740000000002 134.83595,107.91020000000002" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 64.82355,100.0 C 64.82355,102.94729000000001 62.43430000000001,105.33654999999999 59.487,105.33654999999999" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 59.487,105.33654999999999 C 56.539699999999996,105.33654999999999 54.150450000000006,102.94729000000001 54.150450000000006,100.0" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 54.150450000000006,100.0 C 54.150450000000006,97.05271 56.539699999999996,94.66345000000001 59.487,94.66345000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 59.487,94.66345000000001 C 62.43430000000001,94.66345000000001 64.82355,97.05271 64.82355,100.0" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 145.84955,100.0 C 145.84955,102.94729000000001 143.46030000000002,105.33654999999999 140.513,105.33654999999999" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 140.513,105.33654999999999 C 137.5657,105.33654999999999 135.17645000000002,102.94729000000001 135.17645000000002,100.0" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 135.17645000000002,100.0 C 135.17645000000002,97.05271 137.5657,94.66345000000001 140.513,94.66345000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 140.513,94.66345000000001 C 143.46030000000002,94.66345000000001 145.84955,97.05271 145.84955,100.0" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 126.4,102.2 C 127.61505,102.2 128.6,101.21502500000001 128.6,100.0" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<path d="M 128.6,100.0 C 128.6,98.784975 127.61505,97.80000000000001 126.4,97.80000000000001" fill="none" fill-rule="evenodd" stroke="#DC0502" stroke-linecap="round" stroke-linejoin="bevel" stroke-opacity="1" stroke-width="1"/>
+	<circle cx="69.23675000000001" cy="106.60000000000001" fill="#031F34" r="0.85"/>
+	<circle cx="134.83595" cy="107.91020000000002" fill="#031F34" r="0.85"/>
+	<circle cx="140.513" cy="105.33654999999999" fill="#031F34" r="0.85"/>
+	<circle cx="52.238699999999994" cy="93.49905000000001" fill="#031F34" r="0.85"/>
+	<circle cx="134.83595" cy="92.08980000000001" fill="#031F34" r="0.85"/>
+	<circle cx="69.23675000000001" cy="93.4" fill="#031F34" r="0.85"/>
+	<circle cx="140.513" cy="94.66345000000001" fill="#031F34" r="0.85"/>
+	<circle cx="73.60000000000001" cy="97.80000000000001" fill="#031F34" r="0.85"/>
+	<circle cx="128.6" cy="100.0" fill="#031F34" r="0.85"/>
+	<circle cx="126.4" cy="102.2" fill="#031F34" r="0.85"/>
+	<circle cx="135.17645000000002" cy="100.0" fill="#031F34" r="0.85"/>
+	<circle cx="59.487" cy="105.33654999999999" fill="#031F34" r="0.85"/>
+	<circle cx="145.84955" cy="100.0" fill="#031F34" r="0.85"/>
+	<circle cx="65.16405" cy="107.91020000000002" fill="#031F34" r="0.85"/>
+	<circle cx="147.7613" cy="106.50095000000002" fill="#031F34" r="0.85"/>
+	<circle cx="65.16405" cy="92.08980000000001" fill="#031F34" r="0.85"/>
+	<circle cx="59.487" cy="94.66345000000001" fill="#031F34" r="0.85"/>
+	<circle cx="130.76325" cy="93.4" fill="#031F34" r="0.85"/>
+	<circle cx="126.4" cy="97.80000000000001" fill="#031F34" r="0.85"/>
+	<circle cx="54.150450000000006" cy="100.0" fill="#031F34" r="0.85"/>
+	<circle cx="147.7613" cy="93.49905000000001" fill="#031F34" r="0.85"/>
+	<circle cx="64.82355" cy="100.0" fill="#031F34" r="0.85"/>
+	<circle cx="52.238699999999994" cy="106.50095000000002" fill="#031F34" r="0.85"/>
+	<circle cx="73.60000000000001" cy="102.2" fill="#031F34" r="0.85"/>
+</svg>

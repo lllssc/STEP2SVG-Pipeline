@@ -1,0 +1,6 @@
+svgpathtools
+networkx
+numpy
+moviepy
+tqdm
+Pillow
