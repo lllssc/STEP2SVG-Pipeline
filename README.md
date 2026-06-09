@@ -65,9 +65,11 @@ python reorder.py input_normalized.svg -o output.svg    # custom output path
 We also provide pre-rendered animations to illustrate the difference before and after reordering:
 
 **Before reordering**:
+
 ![Normalized animation](preprocess/test_normalized_frames/test_normalized.gif)
 
 **After reordering**:
+
 ![Reordered animation](preprocess/test_normalized_reordered_frames/test_normalized_reordered.gif)
 
 You can also use our pipeline to visualize the path ordering of your own SVG engineering drawings (containing only line and Bézier curve commands), which will generate an individual SVG and PNG file for each stroke, and export an animated GIF illustrating the drawing process. 
